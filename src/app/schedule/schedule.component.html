@@ -1,0 +1,14 @@
+<h2>Schedule Post</h2>
+<form [formGroup]="scheduleForm" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Post Content</mat-label>
+    <input matInput formControlName="content">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Schedule Date</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Schedule</button>
+</form>
